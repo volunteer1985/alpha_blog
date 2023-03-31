@@ -1,24 +1,22 @@
-<h1>All articles</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Tile</th>
-      <th>Description</th>
-      <th colspan="3">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%@articles.each do |article|%>
-    <tr>
-      <td><%=article.title%></td>
-      <td><%=article.description%></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
-    </tr>
-    <%end%>
-    
-  </tbody>
-</table>
+<h1 class="text-center">All articles</h1>
+
+  <%@articles.each do |article|%>
+    <div class="container">
+    <div class="card text-center">
+      <div class="card-header">
+        <%= article.title %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= article.description %></h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+    </div>
+  <%end%>
+
 <%= link_to 'Create new article', new_article_path %> | 
 <%= link_to 'Home', root_path %>
