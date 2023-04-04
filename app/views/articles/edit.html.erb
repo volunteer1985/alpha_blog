@@ -1,11 +1,6 @@
 <div id="page-content">
   <h2 class="text-center mt-4">Edit article</h2>
-  <%if @article.errors.any?%>
-    <h2>Artile was not updated because of following issues:</h2>
-    <%= render 'list_of_errors' %>
-  <%end%>
+  
   <%= render 'form' %>
-  <%= link_to 'Back to article', article_path %> |
-  <%= link_to 'Go to articles listing', articles_path %> | 
-  <%= link_to 'Home', root_path %>
+
 </div>
