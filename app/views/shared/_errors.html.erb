@@ -1,0 +1,7 @@
+<div class="alert alert-success" role="alert">
+  <%if @article.errors.any?%>
+  <h2 class="alert-heading">Artile was not created because of following issues:</h2>
+  <%= render 'list_of_errors' %>
+<%end%>
+</div>
+

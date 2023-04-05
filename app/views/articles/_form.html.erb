@@ -1,8 +1,5 @@
-<%if @article.errors.any?%>
-  <h2>Artile was not created because of following issues:</h2>
-  <%= render 'list_of_errors' %>
-<%end%>
 <div class="container">
+  <%= render 'shared/errors' %>
   <div class="row justify-content-center">
     <div class="col-10">
       <%= form_with(model: @article, class:'shadow p-3 mb-2 bg-info rounded', local: true) do |form| %>
